@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static',filename='styles/twitter.css') }}"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="left-col">
+      <div class="logo">
+        <img
+          src="{{url_for('static', filename='images/logo.png')}}"
+          style="width: 250px; height: 250px"
+        />
+      </div>
+    </div>
+
+    <div class="right-col">
+      <div class="narbar">
+        <ul>
+          <li>
+            <a href="home">Home</a>
+          </li>
+          <li>
+            <a class="active" href="twitter">Twitter</a>
+          </li>
+          <li>
+            <a href="user">User Reviews</a>
+          </li>
+          <li>
+            <a href="contact">Contact</a>
+          </li>
+          <li>
+            <a href="help">Help</a>
+          </li>
+<!--          <li>-->
+<!--            <a href="churn">Churn Rate</a>-->
+<!--          </li>-->
+        </ul>
+      </div>
+    </div>
+    <div class="herobox">
+      <div class="row">
+        <div class="column">
+          <img
+          src="{{url_for('static', filename='images/man.png')}}"
+          class="man"
+        />
+        </div>
+        <div class="column">
+          <h3
+          class="card-title text-center"
+          style="
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding-top: 10px;
+          "
+        >
+          Twitter Sentiment Analysis
+        </h3>
+        <form id="upload-file" enctype="multipart/form-data" method="post">
+          <label><strong>Select date range to perform analysis:</strong></label>
+          <select
+            style="width: 150px; border: 2px solid; margin-left: 10px"
+            name="days"
+            id="days"
+          >
+            <option value="7">One week</option>
+            <option value="14">Two Weeks</option>
+            <option value="21" disabled>Three Weeks</option>
+            <option value="30" disabled>One Month</option>
+          </select>
+          <br />
+          <button
+            type="submit"
+            name="upload"
+            value="upload"
+            id="openmodal"
+            class="apibutton"
+          >
+            Analyze Information
+          </button>
+        </form>
+
+        </div>
+      
+      </div>
+       <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <h3 style="text-align: center;">Please Wait!!</h3>
+          <div id="spinner" class="loader"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script type="text/javascript">
+  $(document).ready(function () {
+    $("#upload").click(function () {
+      $("#spinner").show();
+      $("#userform").hide();
+    });
+
+    var modal = document.getElementById("myModal");
+    var btn = document.getElementById("openmodal");
+
+    btn.onclick = function () {
+      modal.style.display = "block";
+      $("#spinner").css("display", "block");
+      $("#spinner").show();
+    };
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        modal.style.display = "block";
+      }
+    };
+    window.onload = function () {
+      $("#spinner").hide();
+    });
+  });
+</script>

@@ -1,0 +1,94 @@
+html {
+  height: 100% !important;
+  width: 100% !important;
+}
+* {
+  box-sizing: border-box;
+}
+.login_hero {
+  width: 1200px;
+  height: 600px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.7;
+}
+
+.column {
+  float: left;
+  width: 50%;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.login-form {
+  opacity: 1;
+  width: 400px;
+  font-size: 15px;
+}
+.login-form form {
+  background: rgb(241, 240, 240);
+}
+.login-form h2 {
+  margin: 0 0 15px;
+}
+.form-control,
+.btn {
+  min-height: 38px;
+  border-radius: 2px;
+}
+.btn {
+  font-size: 2px;
+  font-weight: bold;
+}
+
+.loginbox {
+  position: absolute;
+  right: 10px;
+  bottom: 150px;
+  width: 450px;
+  height: 300px;
+  background: rgb(241, 240, 240);
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px 5px rgb(245, 191, 250);
+}
+.loginbutton {
+  border-radius: 25px;
+  width: 200px;
+  height: 50px;
+  text-align: center;
+  font-size: 15px;
+  bottom: 50px;
+  right: 120px;
+  position: absolute;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  border-style: none;
+  font-weight: bold;
+  background-color: #ff6a25;
+}
+
+input[type=text], select {
+  width: 80%;
+  padding: 12px 20px;
+  margin: 5px 0;
+  margin-left: 50px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=password], select {
+  width: 80%;
+  padding: 12px 20px;
+  margin: 5px 0;
+  margin-left: 50px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+*:focus {
+  outline: 0 !important;
+}

@@ -1,0 +1,44 @@
+{
+   "Reviews": [
+
+      {
+         "id":"01",
+         "Review": "I had a good VR gamimg experience with dialog",
+         "Sentiment": "positive",
+         "turnover": "false",
+         "category": "Other"
+      },
+
+      {
+         "id":"02",
+         "Review": "High speed internet connection made my day.",
+         "Sentiment": "positive",
+         "turnover": "false",
+         "category": "internet"
+      },
+
+      {
+         "id":"03",
+         "Review": "Shittiest 4G internet from dialoglk at Dehiwala. Maybe its time to move on.",
+         "Sentiment": "negative",
+         "turnover": "true",
+         "category": "internet"
+      },
+
+      {
+         "id":"04",
+         "Review": "Rubbish customer service, my broadband connection was not working and they said go on the broadband and get the broken broadband fixed. Maybe if my broadband was working I would have already used the broadband.",
+         "Sentiment": "Negative",
+         "turnover": "false",
+         "category": "customer"
+      },
+
+      {
+         "id":"05",
+         "Review": "dialoglk has the WORST fucking service!! Their connection is horrid and slow and customer care is just a chat bot with bogus irrelevant replies!! #dialog #dialoglk \nDoes anyone ever attend to customer queries @dialoglk !???",
+         "Sentiment": "negative",
+         "turnover": "false",
+         "category": "customer"
+      }
+   ]
+}

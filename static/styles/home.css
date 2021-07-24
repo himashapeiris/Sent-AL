@@ -1,0 +1,269 @@
+html {
+  height: 100%;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #efcaff;
+  /*#8E4EE2*/
+  /* background-image: url({{ url_for('static', filename='images/bg.jpg') }}) */
+}
+.left-col {
+  flex-basis: 40%;
+}
+.logo {
+  margin-top: -60px;
+}
+.right-col {
+  flex-basis: 60%;
+}
+.narbar {
+  position: absolute;
+  right: 45px;
+  top: 35px;
+  display: flex;
+}
+.narbar li {
+  list-style: none;
+  margin: 0 40px;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 700;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
+  cursor: pointer;
+}
+.narbar li a {
+  text-decoration: none;
+  color: black;
+}
+
+.narbar a:hover {
+  -webkit-transition: all 0.4s ease-out;
+  color: #ff6a25;
+}
+.narbar a:active {
+  color: #ff6a25;
+}
+
+.heroh1 {
+  padding-top: 60px;
+  padding-left: 30px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
+  color: #8e4ee2;
+  font-size: 35px;
+  font-weight: bold;
+}
+.buttonbox {
+  margin-top: -16px;
+  margin-left: 65px;
+  width: 400px;
+  height: 400px;
+  background-color: #fcf1ef;
+  border-radius: 100px;
+  box-shadow: 5px 5px 5px 5px rgb(255, 183, 162);
+}
+
+.findtwitter {
+  width: 180px;
+  border-radius: 20px;
+  height: 50px;
+  font-size: 18px;
+  background-color: #ff6a25;
+  border-style: none;
+  font-weight: 700;
+  margin-left: 103px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
+}
+
+form {
+  padding-top: 10px;
+  font-size: 14px;
+  margin-top: 30px;
+}
+
+.card-title {
+  font-weight: 300;
+}
+
+.card {
+  opacity: 0.9;
+}
+
+.effect7 {
+  position: relative;
+  -webkit-box-shadow: 0 1px 20px rgba(0, 0, 0, 0.3),
+    0 0 40px rgba(0, 0, 0, 0.1) inset;
+  -moz-box-shadow: 0 1px 20px rgba(0, 0, 0, 0.3),
+    0 0 40px rgba(0, 0, 0, 0.1) inset;
+  box-shadow: 0 1px 20px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.btn {
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+.login-form {
+  width: 700px;
+  margin: 20px;
+}
+
+.sign-up {
+  text-align: center;
+  padding: 20px 0 0;
+}
+
+.alert {
+  margin-bottom: -30px;
+  font-size: 13px;
+  margin-top: 20px;
+}
+
+.modal-dialog {
+  max-width: 800px;
+  margin: 30px auto;
+}
+
+.modal-body {
+  position: relative;
+  padding: 0px;
+}
+
+.close {
+  position: absolute;
+  right: -30px;
+  top: 0;
+  z-index: 999;
+  font-size: 2rem;
+  font-weight: normal;
+  color: #fff;
+  opacity: 1;
+}
+
+.custom-file-uploader {
+  position: relative;
+  input[type="file"] {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: default;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 60%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+.column2 {
+  float: left;
+  width: 40%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.landing {
+  width: 780px;
+  height: 450px;
+  margin-top: -50px !important;
+  margin-left: 15px;
+  padding-left: 10px;
+  box-shadow: 5px 5px 5px rgb(209, 209, 207);
+  border-radius: 77px;
+}
+.middle-bar {
+  position: relative;
+  height: 460px;
+  width: 2px;
+  background: rgb(255, 165, 105);
+  /* right: 0; */
+  top: -50px;
+  margin-left: -2px;
+  box-shadow: 1px 1px 50px rgb(209, 209, 207);
+}
+
+/*model style*/
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 500px; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: rgb(252, 115, 115);
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.columnmodel {
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
+.columnmodel2 {
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
+.buttonModal {
+  width: 200px;
+  border-style: none;
+  height: 50px;
+  color: #fff;
+  border-radius: 20px;
+  background-color: #8e4ee2;
+}
+*:focus {
+  outline: 0 !important;
+}

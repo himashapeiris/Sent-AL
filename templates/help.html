@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/contact.css') }}"/>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/twitter.css') }}"/>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="left-col">
+    <div class="logo">
+        <img
+                src="{{url_for('static', filename='images/logo.png')}}"
+                style="width: 250px; height: 250px"
+        />
+    </div>
+</div>
+
+<div class="right-col">
+    <div class="narbar">
+        <ul>
+            <li>
+                <a class="active" href="home">Home</a>
+            </li>
+            <li>
+                <a href="twitter">Twitter</a>
+            </li>
+            <li>
+                <a href="user">User Reviews</a>
+            </li>
+            <li>
+                <a href="contact">Contact</a>
+            </li>
+            <li>
+                <a href="help">Help</a>
+            </li>
+            <!--          <li>-->
+            <!--            <a href="churn">Churn Rate</a>-->
+            <!--          </li>-->
+        </ul>
+    </div>
+</div>
+
+<div class="herobox">
+    <div class="row">
+        <div class="column" style="width: 100%">
+            <h3 class="card-title text-center"
+                style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; padding-top: 10px;">Frequently
+                Asked Questions</h3>
+
+            <label style="float: left; padding-left: 20px; padding-top: 20px;"><strong>+ How are we getting the reviews
+                from Twitter? </strong></label>
+
+            <label style="float: left; padding-left: 10px; padding-top: 20px;">By searching your hashtags on
+                Twitter. </label>
+
+            <label style="float: left; padding-left: 20px; padding-top: 20px;"><strong>+ How can us add another category
+                to category list?</strong></label>
+
+            <label style="float: left; padding-left: 10px; padding-top: 20px;">You have to contact the Sent-AL admin for
+                this.</label>
+
+            <label style="float: left; padding-left: 20px; padding-top: 20px;"><strong>+ How to analyse our
+                reviews? </strong></label>
+
+            <label style="padding-left: 20px; padding-right: 20px; text-align: left;">You have to create a CSV file with
+                the reviews you got from your customers and upload it to the systems to get analysis of your
+                reviews.</label>
+
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+html {
+  height: 100%;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #efcaff;
+}
+.left-col {
+  flex-basis: 40%;
+}
+.logo {
+  margin-top: -60px;
+}
+.right-col {
+  flex-basis: 60%;
+}
+.narbar {
+  position: absolute;
+  right: 45px;
+  top: 35px;
+  display: flex;
+}
+.narbar li {
+  list-style: none;
+  margin: 0 40px;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 700;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
+  cursor: pointer;
+}
+.narbar li a {
+  text-decoration: none;
+  color: black;
+}
+.narbar a:hover {
+  -webkit-transition: all 0.4s ease-out;
+  color: #ff6a25;
+}

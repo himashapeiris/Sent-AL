@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static',filename='styles/home.css') }}"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  </head>
+
+  <body>
+    <div class="left-col">
+      <div class="logo">
+        <img
+          src="{{url_for('static', filename='images/logo.png')}}"
+          style="width: 250px; height: 250px"
+        />
+      </div>
+    </div>
+
+    <div class="right-col">
+      <div class="narbar">
+        <ul>
+          <li>
+            <a class="active" href="home">Home</a>
+          </li>
+          <li>
+            <a href="twitter">Twitter</a>
+          </li>
+          <li>
+            <a href="user">User Reviews</a>
+          </li>
+          <li>
+            <a href="contact">Contact</a>
+          </li>
+          <li>
+            <a href="help">Help</a>
+          </li>
+<!--          <li>-->
+<!--            <a href="churn">Churn Rate</a>-->
+<!--          </li>-->
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="column">
+        <img
+          class="landing"
+          src="{{url_for('static', filename='images/landing.png')}}"
+        />
+      </div>
+      <div class="middle-bar"></div>
+      <div class="column2">
+        <div class="buttonbox">
+          <h1 class="heroh1">
+            Easily <br />Analyze <br />
+            Customer Satisfaction
+          </h1>
+          <br />
+          <button class="findtwitter" id="openModel">Find Reviews</button>
+
+          <!-- The Modal -->
+          <div id="myModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <h3 style="text-align: center">
+                Visualize Customer Satisfaction
+              </h3>
+
+              <form
+                id="upload-file"
+                enctype="multipart/form-data"
+                method="post"
+              >
+                <div class="row">
+                  <div class="columnmodel">
+                    <button
+                      type="button"
+                      class="buttonModal"
+                      onclick="window.open('twitter','_self');"
+                    >
+                      By Twitter reviews
+                    </button>
+                  </div>
+                  <div class="columnmodel2">
+                    <button
+                      type="button"
+                      class="buttonModal"
+                      onclick="window.open('user','_self');"
+                    >
+                      By uploading your reviews
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script type="text/javascript">
+  // Get the modal
+  var modal = document.getElementById("myModal");
+
+  // Get the button that opens the modal
+  var btn = document.getElementById("openModel");
+
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+
+  // When the user clicks on the button, open the modal
+  btn.onclick = function () {
+    modal.style.display = "block";
+  };
+
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function () {
+    modal.style.display = "none";
+  };
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  };
+
+  function logout() {
+    console.log("logout");
+  }
+  $(document).ready(function () {
+    $('input[type="file"]').on("change", function () {
+      let filenames = [];
+      let files = document.getElementById("customFile").files;
+      if (files.length > 1) {
+        filenames.push("Total Files (" + files.length + ")");
+      } else {
+        for (let i in files) {
+          if (files.hasOwnProperty(i)) {
+            filenames.push(files[i].name);
+          }
+        }
+      }
+      $(this).next(".custom-file-label").html(filenames.join(","));
+    });
+  });
+</script>
